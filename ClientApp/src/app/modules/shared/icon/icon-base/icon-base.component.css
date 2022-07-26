@@ -1,0 +1,6 @@
+i.icon{
+    color: #444;
+}
+i.icon.icon-hover:hover{
+    color: #222;
+}
