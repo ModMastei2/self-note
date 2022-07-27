@@ -16,4 +16,9 @@
 }
 .page-container{
     height: 100vh;
+    overflow: hidden;
+}
+.content{
+    overflow-y: scroll;
+    height: 100%;
 }
