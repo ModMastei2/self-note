@@ -6,13 +6,24 @@
     background: var(--bg-main);
     color: var(--normal-text);
     box-shadow: 3px 0 30px -5px #888;
-    padding: 5px;
+    transition: .5s all ease-in-out;
+}
+.side-bar .balloon{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-content: center;
+    background: var(--bg-ballot);
+    right: -10px;
+    border-radius: 100%;
 }
 .side-bar .logo-container{
     display: flex;
     font-size: 1.5rem;
     align-items: center;
     justify-content: space-between;
+    background: var(--bg-hover);
 }
 .side-bar .logo-container i{
     margin: 1rem;
@@ -23,11 +34,16 @@
     align-items: center;
 }
 /* List */
+ul{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
 ul.nav-list{
-    width: 100%;
-    height: 100%;
+    width: 95%;
     margin: 0;
     padding: 0;
+    overflow-y: scroll;
 }
 ul.nav-list li{
     list-style: none;
@@ -35,8 +51,10 @@ ul.nav-list li{
     padding: 10px;
     font-size: .95rem;
     border-radius: 10px;
-    margin-top: 5px;
+    margin: 5px 0 0 7px;
+    transition: .5s all ease-in-out;
 }
+
 ul.nav-list li:hover{
     background: var(--grow);
     color: var(--grow-text);
@@ -58,6 +76,7 @@ ul.nav-list li a i{
     width: 100%;
     position: absolute;
     bottom: 7px;
+    background: var(--bg-hover);
 }
 .profile-container #logout{
     width: 15%;
@@ -66,17 +85,18 @@ ul.nav-list li a i{
     justify-content: center;
     height: 60px;
     margin-right: 5px;
+    border-radius: 10px;
 }
 .profile-container #logout:hover{
     background: var(--grow);
     color: var(--grow-text);
-    border-radius: 10px;
     cursor: pointer;
 }
 .profile-container .profile-detail{
     width: 80%;
     display: flex;
     align-items: center;
+    /* justify-content: center; */
     line-height: .80rem;
     border-radius: 10px;
     cursor: pointer;
@@ -95,7 +115,7 @@ ul.nav-list li a i{
     height: 50px;
     border-radius: 100%;
     overflow: hidden;
-    margin: 5px;
+    /* margin: 5px; */
 }
 .profile-detail .profile-image:hover{
     background: #656565a8;
@@ -108,4 +128,13 @@ ul.nav-list li a i{
     border-radius: 100%;
     object-fit:cover;
     padding: 2px;
+}
+::-webkit-scrollbar{display: none;}
+
+/* onHiding */
+.side-bar.active{
+    width: 70px;
+}
+.side-bar.active .logo-container .logo-icon{
+    display: none;
 }

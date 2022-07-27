@@ -24,6 +24,7 @@
             ],
             "styles": [
               "src/styles.css",
+              "src/assets/util/scroller.min.css",
               "src/assets/bootstrap/bootstrap.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/regular.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css"

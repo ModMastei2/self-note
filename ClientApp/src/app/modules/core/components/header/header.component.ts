@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  public isHide: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  public onHideSidebar(): void{
+    this.isHide = !this.isHide
+  }
 }

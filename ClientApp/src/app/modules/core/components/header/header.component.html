@@ -1,4 +1,4 @@
-<div class="side-bar active">
+<div class="side-bar" [class.active]="isHide">
     <div class="logo-container">
         <div class="logo-icon">
             <i class="fas fa-home"></i>
@@ -6,7 +6,9 @@
                 Self-X
             </div>
         </div>
-        <i class="fas fa-bars"></i>
+        <span class="balloon">
+            <i class="fas fa-angle-left"></i>
+        </span>
     </div>
     <ul class="nav-list">
         <li>
@@ -72,10 +74,45 @@
             </a>
             <!-- <span class="nav-tooltip">Setting</span> -->
         </li>
+        <li>
+            <a>
+                <i class="fas fa-cog"></i>
+                <span class="link-name">Setting</span>
+            </a>
+            <!-- <span class="nav-tooltip">Setting</span> -->
+        </li>
+        <li>
+            <a>
+                <i class="fas fa-cog"></i>
+                <span class="link-name">Setting</span>
+            </a>
+            <!-- <span class="nav-tooltip">Setting</span> -->
+        </li>
+        <li>
+            <a>
+                <i class="fas fa-cog"></i>
+                <span class="link-name">Setting</span>
+            </a>
+            <!-- <span class="nav-tooltip">Setting</span> -->
+        </li>
+        <li>
+            <a>
+                <i class="fas fa-cog"></i>
+                <span class="link-name">Setting</span>
+            </a>
+            <!-- <span class="nav-tooltip">Setting</span> -->
+        </li>
+        <li>
+            <a>
+                <i class="fas fa-cog"></i>
+                <span class="link-name">Setting</span>
+            </a>
+            <!-- <span class="nav-tooltip">Setting</span> -->
+        </li>
     </ul>
     <div class="profile-container">
         <div class="profile-detail">
-            <div class="profile-image">
+            <div class="profile-image" (click)="onHideSidebar()">
                 <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8I3QPxsmDjamv2vYkP8FjhVd2pdZoPGOelg&usqp=CAU" alt="">
             </div>
             <div class="detail">
