@@ -1,42 +1,92 @@
-
+/* Section */
 .side-bar{
     position: relative;
     width: 250px;
     height: 100%;
-    background: rgb(17, 3, 42);
-    color: white;
+    background: var(--bg-main);
+    color: var(--normal-text);
     box-shadow: 3px 0 30px -5px #888;
+    padding: 5px;
 }
 .side-bar .logo-container{
     display: flex;
-    line-height: 1.8rem;
     font-size: 1.5rem;
     align-items: center;
     justify-content: space-between;
 }
 .side-bar .logo-container i{
     margin: 1rem;
+    cursor: pointer;
 }
 .logo-container .logo-icon{
     display: flex;
     align-items: center;
 }
+/* List */
+ul.nav-list{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+ul.nav-list li{
+    list-style: none;
+    background: var(--bg-hover);
+    padding: 10px;
+    font-size: .95rem;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+ul.nav-list li:hover{
+    background: var(--grow);
+    color: var(--grow-text);
+    transition: .30s all ease-in-out;
+    cursor: pointer;
+}
+ul.nav-list li a{
+    text-decoration: none;
+    pointer-events: none;
+}
+ul.nav-list li a i{
+    padding: 6px;
+}
 /* User Menu */
 .profile-container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
+    position: absolute;
+    bottom: 7px;
 }
-.profile-container .profile-detail{
-    width: 85%;
+.profile-container #logout{
+    width: 15%;
     display: flex;
     align-items: center;
-    justify-items: flex-start;
+    justify-content: center;
+    height: 60px;
+    margin-right: 5px;
+}
+.profile-container #logout:hover{
+    background: var(--grow);
+    color: var(--grow-text);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.profile-container .profile-detail{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    line-height: .80rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.profile-container .profile-detail .detail .job{
+    font-size: .65rem;
+    margin-left: 2px;
 }
 .profile-container .profile-detail:hover{
     background: var(--grow);
-    border-radius: 10px;
     color: var(--grow-text);
     transition: .35s all;
 }
@@ -48,7 +98,7 @@
     margin: 5px;
 }
 .profile-detail .profile-image:hover{
-    background: var(--hover);
+    background: #656565a8;
     transition: .35s background;
     cursor: pointer;
 }
@@ -57,5 +107,5 @@
     height: 50px;
     border-radius: 100%;
     object-fit:cover;
-    padding: 3px;
+    padding: 2px;
 }
